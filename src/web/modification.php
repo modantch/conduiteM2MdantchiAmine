@@ -28,6 +28,8 @@ catch (Exception $e)
   {
   ?>
 
+
+
   <form name="insertion" action="modificationSave.php" method="POST">
     <input type="hidden" name="id" value="<?php echo($id) ;?>">
   <table border="0" align="center" cellspacing="2" cellpadding="2">
@@ -69,12 +71,16 @@ catch (Exception $e)
     </tr>
   </table>
 </form>
+<a href="supprimer.php?id=<?php echo $id;?>" > <input type="button" value="Supprimer"> </a>
+ 
+</button> 
 
 
 <?php
   }
   connexion.closeCursor();
   ?>
+
 
 
   </body>
