@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 04 Octobre 2016 à 00:04
+-- Généré le :  Mer 05 Octobre 2016 à 18:45
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -33,9 +33,9 @@ CREATE TABLE `atelier` (
   `type` text NOT NULL,
   `langue` text NOT NULL,
   `Niveau` text NOT NULL,
-  `capacité_accueil` int(255) NOT NULL,
+  `capacité_accueil` text NOT NULL,
   `Adresse` text NOT NULL,
-  `durée` int(255) NOT NULL
+  `durée` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -56,7 +56,7 @@ ALTER TABLE `atelier`
 -- AUTO_INCREMENT pour la table `atelier`
 --
 ALTER TABLE `atelier`
-  MODIFY `id_atelier` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_atelier` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
