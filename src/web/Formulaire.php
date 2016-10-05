@@ -9,7 +9,7 @@
     <title>Ajout Atelier</title>
 
 <body>
-<form id="form1" name="form1" method="post" action="AjouterAtelier.php.  ">
+<form id="form1" name="form1" method="post" action="AjouterAtelier.php  ">
 
 
     <div align="center">
