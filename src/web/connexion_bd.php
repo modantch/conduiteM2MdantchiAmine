@@ -3,7 +3,7 @@
 
 
     try {
-        $connexion = new PDO('mysql:host=localhost;dbname=bd_site;charset=utf8', 'root', '');
+        $connexion = new PDO('mysql:host=localhost;dbname=bd_site;charset=utf8', 'root', 'root');
 
     }
     catch (Exception $e)

@@ -1,29 +1,25 @@
 <?php
-try
-{
-  $connexion = new PDO('mysql:host=localhost;dbname=bd;charset=utf8', 'root', 'root');
-}
-catch (Exception $e)
-{
-        die('Erreur : ' . $e->getMessage());
-} 
- 
+include "connexion_bd.php";
 $id  = $_GET['id'] ;
 
 
  $requete = $connexion->query("DELETE 
-            FROM Atelier
-      WHERE id_Atelier = '$id'" ) ;
+            FROM atelier
+      WHERE id_atelier = '$id'" ) ;
 
 
 
 if($requete)
   {
-    echo("La suppression à été correctement effectuée") ;
+    echo("La suppression a été correctement effectuée") ;
+    include "Aceuil.php";
+
   }
   else
   {
-    echo("La suppression à échouée") ;
+    echo("La suppression a échoué") ;
+    include "modification.php";
+
   }
 
 ?>

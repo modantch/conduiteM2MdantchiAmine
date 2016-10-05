@@ -31,7 +31,7 @@ $b=$data->fetchAll();
 
     foreach ($b  as $result){ ?>
         <tr>
-            <td><?php echo $result['id_atelier']; ?></td>
+            <td><a href="modification.php?id=<?php echo $result['id_atelier']; ?>"><?php echo $result['id_atelier']; ?> </a> </td>
             <td><?php echo $result['titre_atelier']; ?></td>
             <td><?php echo $result['theme']; ?></td>
             <td><?php echo $result['type']; ?></td>

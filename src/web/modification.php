@@ -5,22 +5,15 @@
 <body>
 
   <?php
-try
-{
-  $connexion = new PDO('mysql:host=localhost;dbname=bd;charset=utf8', 'root', 'root');
-}
-catch (Exception $e)
-{
-        die('Erreur : ' . $e->getMessage());
-}
+include "connexion_bd.php";
 
 
-  $id  = 1;//$_GET["id"] ;
+  $id  = $_GET["id"] ;
   
  
   $requete = $connexion->query("SELECT *
-            FROM Atelier
-      WHERE id_Atelier = '$id'")  ;
+            FROM atelier
+      WHERE id_atelier = '$id'")  ;
 
   //affichage des données:
   if ($result = $requete->fetch())
@@ -35,7 +28,7 @@ catch (Exception $e)
   <table border="0" align="center" cellspacing="2" cellpadding="2">
     <tr align="center">
       <td>Titre_atelier</td>
-      <td><input type="text" name="Titre_atelier" value="<?php echo $result['Titre_atelier'] ;?>"></td>
+      <td><input type="text" name="titre_atelier" value="<?php echo $result['titre_atelier'] ;?>"></td>
     </tr>
     <tr align="center">
       <td>theme</td>
@@ -55,7 +48,7 @@ catch (Exception $e)
     </tr>
     <tr align="center">
       <td>Capacité_accueil</td>
-      <td><input type="text" name="Capacité_accueil" value="<?php echo $result['Capacité_accueil'] ;?>"></td>
+      <td><input type="text" name="capacité_accueil" value="<?php echo $result['capacité_accueil'] ;?>"></td>
     </tr>
      <tr align="center">
       <td>Adresse</td>

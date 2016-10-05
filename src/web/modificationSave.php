@@ -1,62 +1,46 @@
 <?php
-try
-{
-  $connexion = new PDO('mysql:host=localhost;dbname=bd;charset=utf8', 'root', 'root');
-}
-catch (Exception $e)
-{
-        die('Erreur : ' . $e->getMessage());
-} 
- 
+include "connexion_bd.php";
 
  
 
-  $titre     = $_POST["Titre_atelier"] ;
+  $titre     = $_POST["titre_atelier"] ;
   $theme = $_POST["theme"] ;
   $type = $_POST["type"] ;
 -  $langue        = $_POST["langue"] ;
   $Niveau        = $_POST["Niveau"] ; 
-  $Capacité_accueil         = $_POST["id"] ;
+  $Capacité_accueil         = $_POST["capacité_accueil"] ;
    $Adresse         = $_POST["Adresse"] ;
     $durée         = $_POST["durée"] ;
       $id         = $_POST["id"] ;
 
- 
-  //création de la requête SQL:
-  $sql = "UPDATE Atelier
-            SET Titre_atelier         = '$titre', 
-	          theme     = '$theme',
-		  type    = '$type',
-		  langue           = '$langue',
-		  Niveau = '$Niveau',
-      id = '$id',
-      Adresse = '$Adresse',
-      durée = '$durée'
-           WHERE id_Atelier = '$id' " ;
+
  
   //exécution de la requête SQL:
 
 
-  $requete = $connexion->query("UPDATE Atelier
-            SET Titre_atelier         = '$titre',
-          theme     = '$theme',
+  $requete = $connexion->query("UPDATE atelier
+    SET titre_atelier         = '$titre',
+      theme     = '$theme',
       type    = '$type',
       langue           = '$langue',
       Niveau = '$Niveau',
-        Capacité_accueil         = 'Capacité_accueil' ,
+      capacité_accueil         = 'Capacité_accueil' ,
       Adresse = '$Adresse',
       durée = '$durée'
-           WHERE id_Atelier='$id'" ) ;
-
+           WHERE id_atelier='$id'" ) ;
 
  
   if($requete)
   {
-    echo("La modification a été correctement effectuée") ;
+    echo("La modification a été correctement effectué") ;
+    include "Aceuil.php";
+
+ 
   }
   else
   {
-    echo("La modification  a échouée") ;
+    echo("La modification  a échoué") ;
+    include "modification.php";
   }
 
 ?>
