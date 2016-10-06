@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>	
+	<meta charset="UTF-8">
+		
+	<title> KanBan </title>
+	
+    </head>
+
+    <body>
+	
+	<section id="user_stories">
+		<h2>Rappel des US</h2>
+		<ul>
+			<li> US1 : En tant que laboratoire je souhaite ajouter un atelier ou lister l'ensemble des ateliers existants</li>
+			<li> US2 : En tant que laboratoire, je souhaite modifier un atelier ou le supprimer</li>
+			
+		</ul>
+	</section>
+	
+	<section id="taches">
+		<h2> Rappel des tâches</h2>
+		<ol>
+			<li> Création de la BD_Site qui contient la table Atelier (id_Atelier, Titre_atelier, theme, type, langue,Niveau, Capacité_accueil, Adresse, durée)</li>
+			<li> Implementer l’ajout d’un atelier</li>
+			<li>Ecrire la requete SQL qui permet d’inserer un nouveau atelier dans la table atelier </li>
+			<li> Créer la page Modifier permettant de modifier les informations d’un atelier, de les 
+enregistrer, de supprimer l’atelier ou bien d’annuler la modification et qui renvoie 
+l’utilisateur sur la page Accueil lorsque l’opération est terminée ou annulée. </li>
+			<li> Creer u-ne page html/css contenant un formulaire pour la saisi des informations de création d’un atelier.
+Il faut ajouter à cette vue un boutton « Ajouter atelier »</li>
+			<li>Implementer un controleur qui recupere les informations saissies sur le formulaire d’ajout et les envoit vers la BD pour exécuter la requete insersion atelier</li>
+			<li>Tester la fonctionnalité d’ajout : inserer des ateliers Via le formulaire dans la table atelier.</li>
+			<li>Lister les ateliers</li>
+			<li>Ecrire la requete SQL qui permet de lister l’ensemble des ateliers de la table Atelier</li>
+			<li>Creer une page html/css permettant d’afficher la liste des ateliers dans un tableau.</li>
+			<li>Implementer un controleur qui recupere les données de la table Atelier et les passe à la vue.</li>
+			<li>Tester la fonctionnalité de : lister des ateliers via la table Atelier.</li>
+			<li>Modification d’un atelier</li>
+			<li>Ecrire la requete SQL qui permet de recupere les informations d’un atelier dans la table atelier.
+Ecrire la requete SQL qui permet de mettre à jour les informations modifiées d’un atelier dans la table atelier.</li>
+			<li>Creer une page html/css contenant un formulaire qui affiche les informations d ‘un atelier donnant la posibilitè de les modifier.</li>
+			<li>Implementer un controleur qui recupere les données d’un atelier de la table Atelier et les passe à la vue.
+Ce meme controleur recupere les informations saisies sur le formulaire apes modification et les envoit vers la BD pour exécuter la requete modifier atelier</li>
+			<li>Test : - modification d’un atelier et vérifier les modifcations dans la table Atelier.</li>
+			<li>Suppression d’un atelier</li>
+			<li>Ecrire la requete SQL qui permet de supprimer un atelier de la table atelier</li>
+			<li>Ajout d’un boutton de suppression sur la page de modification</li>
+			<li>Tester la suppression d’un atelier : cliquer sur suprimer et verifier dans la table si l’atelier c’est bien suprimmer.</li>
+
+
+		</ol>
+	
+	</section>
+	<h2> KanBan </h2>
+	<section id ="kanban">
+		<table id="kanban_table" >
+			<tr>
+				<td> </td>
+				<td>Todo</td>
+				<td>OnGoing</td>
+				<td>Done</td>
+			</tr>
+			<tr>
+				<td> US1 </td>
+				<td> 
+					<ul class="todo">
+					</ul>
+				</td>
+				<td> 
+					<ul class="ongoing">
+					</ul>
+				</td>
+				<td> 
+					<ul class="done">
+						<li> T1 - Amine </li>
+						<li> T2 - Amine </li>
+						<li> T3 - Amine </li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr>
+				<td> US2 </td>
+				<td> 
+					<ul class="todo">					
+						
+					</ul>
+				</td>
+				<td> 
+					<ul class="ongoing">
+					
+					</ul>
+				</td>
+				<td> 
+					<ul class="done">
+					<li> T4 - Mohamed </li>
+					<li> T5 - Mohamed </li>
+
+					</ul>
+				</td>
+			</tr>
+			
+
+			
+		</table>
+	</section>
+
+
+    </body>
+
+</html>
