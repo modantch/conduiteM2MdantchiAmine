@@ -71,7 +71,6 @@ include "connexion_bd.php";
 
 <?php
   }
-  connexion.closeCursor();
   ?>
 
 
