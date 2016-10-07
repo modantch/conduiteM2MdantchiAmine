@@ -13,8 +13,8 @@
 
 
     <div align="center">
-        <p><img src="image/ " width="1282" height="113" /></p>
-        <h1 align="center" id="pgtitle">Cr&eacute;ez Votre Atelier </h1>
+        <p>&nbsp;</p>
+        <h1 align="center" id="pgtitle"> ----------------- </h1>
 
             <table width="500" border="0" align="center" bordercolor="#0066FF" bgcolor="#3399CC">
                 <tr>
@@ -65,8 +65,8 @@
                   <div align="center">
 
                         <label>
-                    <input value="Enregistrer" name="submit_f2" type="submit"   align="center"   >
-                 </label>
+                    <input value="Enregistrer" name="submit " type="submit"   align="center"   >
+                         </label>
                     </div>
             </tr>
 

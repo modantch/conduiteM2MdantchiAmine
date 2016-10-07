@@ -1,6 +1,12 @@
 
-</body>
-</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" media="screen" type="text/css" CNRS-Liste="Accueil" href="style/inscription.css" />
+    <title>CNRS-Liste</title>
+
+<body>
 
 <?php
 
@@ -47,7 +53,11 @@ $b=$data->fetchAll();
 
     }
 
+    include "retourAcueil.php";
+
     ?>
+
 </table>
 
-
+</body>
+</html>

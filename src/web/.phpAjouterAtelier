@@ -6,7 +6,8 @@
 <?php
 
 include "connexion_bd.php";
- 
+include "Formulaire.php";
+
 if (isset($_POST["titre"] ))
 {
     $t=$_POST["titre"];
@@ -51,17 +52,13 @@ if (isset($_POST["Adresse"] )) {
 $ma_requete = "INSERT INTO `atelier` (`id_atelier`, `titre_atelier`, `theme`, `type`, `langue`, `Niveau`, `capacité_accueil`, `Adresse`, `durée`) VALUES (NULL, '$t', '$Theme', '$Type', '$Langue', '$Niveau', '$Capacité', '$Adresse ', '$Duree')";
  $connexion->query($ma_requete );
 
-if( $ma_requete == true)
+if($connexion->query($ma_requete)== true)
 {
     echo("Atelier ajouter ") ;
-    include "retourAcueil.php";
-
 }
 else
 {
     echo("Atelier non ajouter") ;
-    include "retourAcueil.php";
-
 }
 
 ?>

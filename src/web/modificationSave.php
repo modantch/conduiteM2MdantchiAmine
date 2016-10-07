@@ -24,23 +24,26 @@ include "connexion_bd.php";
       type    = '$type',
       langue           = '$langue',
       Niveau = '$Niveau',
-      capacité_accueil         = 'Capacité_accueil' ,
+      capacité_accueil         = '$Capacité_accueil' ,
       Adresse = '$Adresse',
       durée = '$durée'
            WHERE id_atelier='$id'" ) ;
 
  
-  if($requete)
+  if($requete== true)
   {
     echo("La modification a été correctement effectué") ;
-    include "Aceuil.php";
+      include "retourAcueil.php";
+
 
  
   }
+
   else
   {
-    echo("La modification  a échoué") ;
-    include "modification.php";
+      include "retourAcueil.php";
+      echo("La modification  a échoué") ;
+
   }
 
 ?>

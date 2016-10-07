@@ -12,13 +12,13 @@ $id  = $_GET['id'] ;
 if($requete)
   {
     echo("La suppression a été correctement effectuée") ;
-    include "Aceuil.php";
+      include "retourAcueil.php";
 
   }
   else
   {
     echo("La suppression a échoué") ;
-    include "modification.php";
+      include "retourAcueil.php";
 
   }
 
